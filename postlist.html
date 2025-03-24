@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게시글 페이지</title>
+    <link rel="stylesheet" href="./css/postlist.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="./login.html"><img id="prevBtn" src="./img/left-arrow.png" /></a>
+      <h1 class="title">커뮤니티 서비스</h1>
+      <div class="dropdown-button">s</div>
+      <ul class="dropdown-menu">
+        <li class="dropdown-item"><a href="./editprofile.html">회원정보 수정</a></li>
+        <li class="dropdown-item"><a href="./editpassword.html">비밀번호 수정</a></li>
+        <li class="dropdown-item"><a href="./login.html">로그아웃</a></li>
+      </ul>
+    </header>
+    <div class="board-container">
+      <div class="board-header">
+        <h1>📢 카테부 게시판</h1>
+        <a href="./createpost.html"><button class="write-btn">게시글 작성</button></a>
+      </div>
+
+      <div class="post-list">
+        <a href="./postdetail.html">
+          <div class="post">
+            <h2 class="post-title">자전거를 탄 풍경</h2>
+            <div class="post-meta">
+              ❤️12 &nbsp;&nbsp; 💬5 &nbsp;&nbsp; 조회수 345
+              <span class="post-date">2024-02-17</span>
+            </div>
+            <p class="post-author">작성자: shai</p>
+          </div>
+        </a>
+
+        <div class="post">
+          <h2 class="post-title">과제하는 풍경</h2>
+          <div class="post-meta">
+            ❤️95 &nbsp;&nbsp; 💬32 &nbsp;&nbsp; 조회수 50
+            <span class="post-date">2024-02-17</span>
+          </div>
+          <p class="post-author">작성자: curry</p>
+        </div>
+
+        <div class="post">
+          <h2 class="post-title">이쁜배경</h2>
+          <div class="post-meta">
+            ❤️777k &nbsp;&nbsp; 💬5k &nbsp;&nbsp; 조회수 890k
+            <span class="post-date">2024-02-17</span>
+          </div>
+          <p class="post-author">작성자: jisu</p>
+        </div>
+      </div>
+    </div>
+    <script src="./js/postlist.js"></script>
+    <script src="./js/function/dropdown.js"></script>
+  </body>
+</html>

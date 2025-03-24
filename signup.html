@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+    <link rel="stylesheet" href="./css/signup.css" />
+  </head>
+  <body>
+    <h1 class="title">
+      <a href="./login.html">커뮤니티 서비스</a>
+    </h1>
+    <div class="signup-container">
+      <h2>회원가입</h2>
+      <form id="signupForm">
+        <label class="textInput">프로필*</label>
+        <p class="error-message" id="error1">*프로필을 등록해주세요</p>
+        <label for="imageInput" class="upload-circle" id="imageLabel"> + </label>
+        <input type="file" id="imageInput" accept="image/*" hidden />
+        <label class="textInput">이메일*</label>
+        <input type="email" id="email" placeholder="이메일을 입력하세요" required />
+        <p class="error-message" id="error2">*올바른 이메일 형식을 입력해주세요</p>
+        <label class="textInput">비밀번호*</label>
+        <input type="password" id="password" placeholder="비밀번호를 입력하세요" required />
+        <p class="error-message" id="error3">*비밀번호는 8자 이상 20자 이하 (대문자 소문자 숫자 특수문자)가 최소 1개 포함해야합니다.</p>
+        <label class="textInput">비밀번호 확인*</label>
+        <input type="password" id="passwordsame" placeholder="비밀번호를 한번더 입력하세요" required />
+        <p class="error-message" id="error4">*비밀번호가 일치하지 않습니다.</p>
+        <label class="textInput">닉네임*</label>
+        <input type="text" id="nickname" placeholder="닉네임을 입력하세요" required />
+        <p class="error-message" id="error5">*닉네임은 10자 이내, 띄어쓰기 불가입니다</p>
+        <button id="signupButton" type="submit" disabled>회원가입</button>
+      </form>
+      <div class="login">
+        <a href="./login.html">로그인 하러가기</a>
+      </div>
+    </div>
+    <script type="module" src="./js/signup.js"></script>
+  </body>
+</html>

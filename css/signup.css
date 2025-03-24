@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  font-family: Arial, sans-serif;
+}
+.title {
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  border-bottom: 2px solid gray;
+  font-size: 30px;
+}
+.title a {
+  text-decoration: none;
+  color: black;
+}
+.signup-container {
+  margin-top: 5%;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: center;
+}
+.signup-container h2 {
+  margin-bottom: 20px;
+}
+#signupForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.upload-circle {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #ddd;
+  cursor: pointer;
+  overflow: hidden;
+  border: 2px solid #aaa;
+  font-size: 50px;
+  background-size: 110px 110px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.has-image {
+  border: none;
+  font-size: 0;
+}
+.signup-container input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.textInput {
+  margin-top: 10px;
+  width: 100%;
+  font-size: 13px;
+  text-align: start;
+  font-weight: bold;
+}
+#signupButton {
+  width: 100%;
+  padding: 10px;
+  background-color: '#ACAOEB';
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.login {
+  margin-top: 15px;
+  font-size: 10px;
+}
+.login a {
+  text-decoration: none;
+  color: black;
+}
+.error-message {
+  display: none;
+  width: 100%;
+  text-align: start;
+  font-size: 10px;
+  color: red;
+}
+.error-on {
+  display: block;
+}
+.active {
+  background-color: pink;
+  color: white;
+}

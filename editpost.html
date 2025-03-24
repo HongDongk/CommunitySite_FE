@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게시글 수정 페이지</title>
+    <link rel="stylesheet" href="./css/editpost.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="./postdetail.html"><img id="prevBtn" src="./img/left-arrow.png" /></a>
+      <h1 class="title">커뮤니티 서비스</h1>
+      <div class="dropdown-button">s</div>
+      <ul class="dropdown-menu">
+        <li class="dropdown-item"><a href="./editprofile.html">회원정보 수정</a></li>
+        <li class="dropdown-item"><a href="./editpassword.html">비밀번호 수정</a></li>
+        <li class="dropdown-item"><a href="./login.html">로그아웃</a></li>
+      </ul>
+    </header>
+    <div class="write-container">
+      <h1>📝 게시글 수정</h1>
+
+      <form id="editpostForm">
+        <label for="title">제목*</label>
+        <input type="text" id="title" name="title" placeholder="제목을 입력해주세요(최대 26자)" required />
+
+        <label for="content">내용*</label>
+        <textarea id="content" name="content" rows="20" placeholder="내용을 입력해주세요" required></textarea>
+
+        <label>이미지*</label>
+        <input type="file" id="imageInput" name="image" accept="image/*" />
+
+        <button id="editPostButton" type="submit" disabled>수정하기</button>
+      </form>
+    </div>
+    <script src="./js/editpost.js"></script>
+    <script src="./js/function/dropdown.js"></script>
+  </body>
+</html>
