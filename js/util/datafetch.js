@@ -37,3 +37,20 @@ export async function logoutfetch() {
     window.alert("로그아웃 실패");
   }
 }
+
+// 회원가입 패치
+export async function signUpfetch(signupData) {
+  try {
+    const response = await fetch(`${backUrl}/users`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: signupData,
+    });
+    window.location.replace("../login.html");
+  } catch (err) {
+    console.log(err);
+    window.alert("회원가입 실패");
+  }
+}

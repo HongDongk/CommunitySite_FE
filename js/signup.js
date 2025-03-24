@@ -2,7 +2,9 @@ import {
   checkemailPattern,
   checkpasswordPattern,
   checknicknamePattern,
+  toggleError,
 } from "./util/validation.js";
+import { signUpfetch } from "./util/datafetch.js";
 
 const signupForm = document.getElementById("signupForm");
 const imageInput = document.getElementById("imageInput");
@@ -44,51 +46,26 @@ function validateImage(event) {
 
 function validateEmail() {
   emailCheck = checkemailPattern(emailInput.value);
-
-  if (emailCheck) {
-    emailError.classList.remove("error-on");
-  } else {
-    emailError.classList.add("error-on");
-  }
-
+  toggleError(emailError, emailCheck);
   updateSignUpButton();
 }
 
 function validatePassword() {
   passwordCheck = checkpasswordPattern(passwordInput.value);
-
-  if (passwordCheck) {
-    passwordError.classList.remove("error-on");
-  } else {
-    passwordError.classList.add("error-on");
-  }
-
+  toggleError(passwordError, passwordCheck);
   updateSignUpButton();
 }
 
 function validatePasswordSame() {
-  console.log(passwordSameInput.value, passwordInput.value);
   passwordSameCheck =
     passwordInput.value === passwordSameInput.value ? true : false;
-
-  if (passwordSameCheck) {
-    passwordSameError.classList.remove("error-on");
-  } else {
-    passwordSameError.classList.add("error-on");
-  }
-
+  toggleError(passwordSameError, passwordSameCheck);
   updateSignUpButton();
 }
 
 function validateNickname() {
   nicknameCheck = checknicknamePattern(nicknameInput.value);
-
-  if (nicknameCheck) {
-    nicknameError.classList.remove("error-on");
-  } else {
-    nicknameError.classList.add("error-on");
-  }
-
+  toggleError(nicknameError, nicknameCheck);
   updateSignUpButton();
 }
 
@@ -123,7 +100,12 @@ signupForm.addEventListener("submit", function (event) {
     passwordSameCheck &&
     nicknameCheck
   ) {
-    window.alert("회원가입 성공");
-    window.location.replace("../login.html");
+    let signupData = JSON.stringify({
+      email: `${emailInput.value}`,
+      password: `${passwordInput.value}`,
+      nickname: `${nicknameInput.value}`,
+      profileUrl: `${imageInput.value}`,
+    });
+    signUpfetch(signupData);
   }
 });
