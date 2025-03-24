@@ -1,9 +1,10 @@
 import { storeData } from "./webstoredata.js";
+import { backUrl } from "../../config/config.js";
 
 // 로그인 패치
 export async function loginfetch(loginData) {
   try {
-    const response = await fetch("http://localhost:8080/login", {
+    const response = await fetch(`${backUrl}/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
