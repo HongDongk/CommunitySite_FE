@@ -7,3 +7,8 @@ export function storeData(key, data) {
 export function getData(key) {
   JSON.parse(localStorage.getItem(key));
 }
+
+// 로컬스토리지 삭제하기
+export function removeData(key) {
+  localStorage.removeItem(key);
+}
