@@ -4,7 +4,7 @@ import {
   checknicknamePattern,
   toggleError,
 } from "./util/validation.js";
-import { signUpfetch } from "./util/datafetch.js";
+import { signUpfetch, imagefetch } from "./util/datafetch.js";
 
 const signupForm = document.getElementById("signupForm");
 const imageInput = document.getElementById("imageInput");
@@ -91,7 +91,7 @@ function updateSignUpButton() {
   }
 }
 
-signupForm.addEventListener("submit", function (event) {
+signupForm.addEventListener("submit", async function (event) {
   event.preventDefault();
   if (
     imageCheck &&
@@ -100,11 +100,13 @@ signupForm.addEventListener("submit", function (event) {
     passwordSameCheck &&
     nicknameCheck
   ) {
+    let imgfile = imageInput.files[0];
+    let profileimg = await imagefetch(imgfile);
     let signupData = JSON.stringify({
       email: `${emailInput.value}`,
       password: `${passwordInput.value}`,
       nickname: `${nicknameInput.value}`,
-      profileUrl: `${imageInput.value}`,
+      profileUrl: `${profileimg}`,
     });
     signUpfetch(signupData);
   }

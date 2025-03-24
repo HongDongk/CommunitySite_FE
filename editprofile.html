@@ -25,18 +25,20 @@
       <form id="editProfileForm">
         <div class="textInput">프로필 사진*</div>
         <p class="error-message" id="error1">*프로필을 등록해주세요</p>
-        <label for="imageInput" class="upload-circle" id="imageLabel"> [변경] </label>
-        <input type="file" id="imageInput" accept="image/*" hidden />
+        <label for="imageInput" class="upload-circle" id="imageLabel">
+          <img id="preview" />
+        </label>
         <label class="textInput">이메일</label>
-        <div id="email">dfsfdsfsf@naver.com</div>
+        <div id="email"></div>
         <label class="textInput">닉네임*</label>
         <input type="text" id="nickname" required />
-        <p class="error-message" id="error2">*닉네임은 10자 이내, 띄어쓰기 불가입니다</p>
+        <p class="error-message" id="error2">
+          *닉네임은 10자 이내, 띄어쓰기 불가입니다
+        </p>
         <button id="editProfileButton" type="submit" disabled>수정하기</button>
       </form>
       <div class="delete-btn" id="openPostModal">회원탈퇴</div>
-      <a href="./postlist.html"><button id="endedit">수정 완료</button></a>
     </div>
-    <script src="./js/editprofile.js"></script>
+    <script type="module" src="./js/editprofile.js"></script>
   </body>
 </html>
