@@ -56,7 +56,6 @@ function updateSignUpButton() {
 editProfileForm.addEventListener("submit", function (event) {
   event.preventDefault();
   if (nicknameCheck) {
-    userData.nickname = nicknameInput.value;
     let userInfoData = JSON.stringify({
       nickname: `${nicknameInput.value}`,
     });

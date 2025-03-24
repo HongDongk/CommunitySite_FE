@@ -102,6 +102,24 @@ export async function userinfofetch(userId, nickname) {
     window.location.replace("../login.html");
   } catch (err) {
     console.log(err);
-    window.alert("회원탈퇴 실패");
+    window.alert("회원정보변경 실패");
+  }
+}
+
+// 비밀번호변경 패치
+export async function passwordfetch(userId, password) {
+  try {
+    const response = await fetch(`${backUrl}/users/password/${userId}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: password,
+    });
+    removeData("user");
+    window.location.replace("../login.html");
+  } catch (err) {
+    console.log(err);
+    window.alert("비밀번호변경 실패");
   }
 }
