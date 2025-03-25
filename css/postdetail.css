@@ -277,6 +277,11 @@ body {
   cursor: pointer;
 }
 
+.dropdown-item a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .dropdown-item:hover {
   background-color: #f1f1f1;
 }
