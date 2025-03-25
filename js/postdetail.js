@@ -1,25 +1,29 @@
 import { renderPostDetail } from "./views/postView.js";
-import { postdetailfetch, postdeletefetch } from "./util/datafetch.js";
+import { renderComment } from "./views/commentView.js";
+import {
+  postdetailfetch,
+  postdeletefetch,
+  commentcreatefetch,
+  commentfetch,
+} from "./util/datafetch.js";
 import { getData } from "./util/webstoredata.js";
 
 const preview = document.getElementById("preview");
 const deleteCommentModal = document.getElementById("deleteCommentModal");
-// const openCommentModalButton = document.getElementById("openCommentModal");
-const closeModalButtons = document.querySelectorAll(".closeModal");
-// const likeButton = document.getElementById("like");
 
-// let like = 12;
-// let isLike = false;
-
-// document.getElementById("like").innerText = `🤍 ${like}`;
-const container = document.querySelector(".postDetail");
+const postcontainer = document.querySelector(".postDetail");
+const commentcontainer = document.querySelector(".comment-container");
 let postId = new URLSearchParams(window.location.search).get("id");
 const userData = getData("user");
 preview.src = userData.profileUrl;
 
 async function initiallize() {
   let postData = await postdetailfetch(postId);
-  renderPostDetail(postData, container);
+  renderPostDetail(postData, postcontainer);
+
+  let commentData = await commentfetch(postId);
+  renderComment(commentData, commentcontainer);
+
   const openPostModalButton = document.getElementById("openPostModal");
   const deletePostModal = document.getElementById("deletePostModal");
   const closeModalButtons = document.querySelectorAll(".closeModal");
@@ -49,19 +53,17 @@ async function initiallize() {
 
 initiallize();
 
-// likeButton.addEventListener("click", function () {
-//   if (!isLike) {
-//     isLike = true;
-//     like++;
-//     document.getElementById("like").innerText = `❤️ ${like}`;
-//   } else {
-//     isLike = false;
-//     like--;
-//     document.getElementById("like").innerText = `🤍 ${like}`;
-//   }
-// });
+const commentInput = document.querySelector(".comment-input");
+const createCommentButton = document.querySelector(".comment-submit");
 
-// 댓글삭제 모달열기
-// openCommentModalButton.addEventListener("click", function () {
-//   deleteCommentModal.style.display = "block";
-// });
+createCommentButton.addEventListener("click", function () {
+  if (commentInput.value.length > 0) {
+    let commentData = JSON.stringify({
+      userId: `${userData.id}`,
+      content: `${commentInput.value}`,
+    });
+    commentcreatefetch(postId, commentData);
+  } else {
+    window.alert("댓글은 한글자 이상이어야합니다!");
+  }
+});

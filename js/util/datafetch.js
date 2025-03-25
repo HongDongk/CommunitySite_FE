@@ -191,3 +191,39 @@ export async function postdeletefetch(postId) {
     window.alert("게시글 삭제 실패");
   }
 }
+
+////////////////// 댓글 /////////////////////////
+
+// 댓글 생성패치
+export async function commentcreatefetch(postId, commentData) {
+  try {
+    await fetch(`${backUrl}/${postId}/comment`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: commentData,
+    });
+    window.alert("댓글 생성이 완료되었습니다!");
+    window.location.reload();
+  } catch (err) {
+    console.log(err);
+    window.alert("게시글 생성실패");
+  }
+}
+
+// 댓글 불러오기패치
+export async function commentfetch(postId) {
+  try {
+    const response = await fetch(`${backUrl}/${postId}/comments`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const result = await response.json();
+    return result;
+  } catch (err) {
+    console.log(err);
+  }
+}
