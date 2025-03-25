@@ -22,3 +22,33 @@ export function renderPostList(postData, container) {
     container.appendChild(postLink);
   });
 }
+
+// 게시글 상세렌더링
+export function renderPostDetail(postDetailData, container) {
+  container.innerHTML = `
+    <h1 class="post-title">${postDetailData.title}</h1>
+    <div class="post-header">
+        <div class="post-header-left">
+            <div class="avatar">${postDetailData.userEmail[0]}</div>
+            <div class="author">${postDetailData.userEmail}</div>
+            <div class="date">${postDetailData.updatedAt.slice(0, 10)}</div>
+        </div>
+        <div class="buttons">
+            <button id="editButton" class="edit-btn" disabled>수정</button>
+            <button class="delete-btn" id="openPostModal" disabled>삭제</button>
+        </div>
+    </div>
+    <div class="post-image">
+        <img src="${postDetailData.imageUrl}" width="100%" />
+    </div>
+
+    <p class="post-content">${postDetailData.content}</p>
+
+    <div class="post-meta">
+        <div id="like">❤️ ${postDetailData.likes}</div>
+        <div>조회수 ${postDetailData.views}</div>
+        <div>💬 ${postDetailData.commentCount}</div>
+    </div>
+    <hr />
+   `;
+}

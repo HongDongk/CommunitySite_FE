@@ -155,5 +155,39 @@ export async function postcreatefetch(postData) {
     window.location.replace("../postlist.html");
   } catch (err) {
     console.log(err);
+    window.alert("게시글 생성실패");
+  }
+}
+
+// 포스트상세 불러오기패치
+export async function postdetailfetch(postId) {
+  try {
+    const response = await fetch(`${backUrl}/posts/${postId}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const result = await response.json();
+    return result;
+  } catch (err) {
+    console.log(err);
+    window.alert("게시글 불러오기 실패");
+  }
+}
+
+// 포스트상세 삭제
+export async function postdeletefetch(postId) {
+  try {
+    await fetch(`${backUrl}/posts/${postId}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    window.location.replace("../postlist.html");
+  } catch (err) {
+    console.log(err);
+    window.alert("게시글 삭제 실패");
   }
 }
