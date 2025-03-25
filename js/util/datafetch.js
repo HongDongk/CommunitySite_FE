@@ -141,3 +141,19 @@ export async function postfetch() {
     console.log(err);
   }
 }
+
+// 포스트 생성패치
+export async function postcreatefetch(postData) {
+  try {
+    await fetch(`${backUrl}/posts`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: postData,
+    });
+    window.location.replace("../postlist.html");
+  } catch (err) {
+    console.log(err);
+  }
+}

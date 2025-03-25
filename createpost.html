@@ -8,13 +8,23 @@
   </head>
   <body>
     <header class="header">
-      <a href="./postlist.html"><img id="prevBtn" src="./img/left-arrow.png" /></a>
+      <a href="./postlist.html"
+        ><img id="prevBtn" src="./img/left-arrow.png"
+      /></a>
       <h1 class="title">커뮤니티 서비스</h1>
-      <div class="dropdown-button">s</div>
+      <div class="dropdown-button">
+        <img id="preview" />
+      </div>
       <ul class="dropdown-menu">
-        <li class="dropdown-item"><a href="./editprofile.html">회원정보 수정</a></li>
-        <li class="dropdown-item"><a href="./editpassword.html">비밀번호 수정</a></li>
-        <li class="dropdown-item"><a href="./login.html">로그아웃</a></li>
+        <li class="dropdown-item">
+          <a href="./editprofile.html">회원정보 수정</a>
+        </li>
+        <li class="dropdown-item">
+          <a href="./editpassword.html">비밀번호 수정</a>
+        </li>
+        <li id="logout" class="dropdown-item">
+          <a href="./login.html">로그아웃</a>
+        </li>
       </ul>
     </header>
     <div class="write-container">
@@ -22,10 +32,22 @@
 
       <form id="postForm">
         <label for="title">제목*</label>
-        <input type="text" id="title" name="title" placeholder="제목을 입력해주세요(최대 26자)" required />
+        <input
+          type="text"
+          id="title"
+          name="title"
+          placeholder="제목을 입력해주세요(최대 26자)"
+          required
+        />
 
         <label for="content">내용*</label>
-        <textarea id="content" name="content" rows="20" placeholder="내용을 입력해주세요" required></textarea>
+        <textarea
+          id="content"
+          name="content"
+          rows="20"
+          placeholder="내용을 입력해주세요"
+          required
+        ></textarea>
 
         <label>이미지*</label>
         <input type="file" id="imageInput" name="image" accept="image/*" />
@@ -33,7 +55,7 @@
         <button id="createPostButton" type="submit" disabled>완료</button>
       </form>
     </div>
-    <script src="./js/createpost.js"></script>
-    <script src="./js/function/dropdown.js"></script>
+    <script type="module" src="./js/createpost.js"></script>
+    <script type="module" src="./js/util/dropdown.js"></script>
   </body>
 </html>
