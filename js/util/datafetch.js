@@ -123,3 +123,21 @@ export async function passwordfetch(userId, password) {
     window.alert("비밀번호변경 실패");
   }
 }
+
+////////////////// 포스트 /////////////////////////
+
+// 전체포스트 불러오기패치
+export async function postfetch() {
+  try {
+    const response = await fetch(`${backUrl}/posts`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const result = await response.json();
+    return result;
+  } catch (err) {
+    console.log(err);
+  }
+}
