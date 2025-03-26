@@ -34,7 +34,7 @@ export function handleRoute() {
   render(view(), document.getElementById("app"));
 
   // 이벤트 바인딩
-  if (path === "/" || path === "/login") bindLoginEvents();
+  if (path === "/login") bindLoginEvents();
   else if (path === "/signup") bindSignupEvents();
   else if (path === "/postlist") bindPostListEvents();
   else if (path === "/createpost") bindCreatePostEvents();
