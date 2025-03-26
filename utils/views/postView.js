@@ -3,23 +3,26 @@ export function renderPostList(postData, container) {
   container.innerHTML = "";
 
   postData.forEach((post) => {
-    const postLink = document.createElement("a");
-    postLink.href = `./postdetail.html?id=${post.id}`;
+    const postWrapper = document.createElement("div");
+    postWrapper.classList.add("post");
+    postWrapper.style.cursor = "pointer";
 
-    postLink.innerHTML = `
-      <div class="post">
-        <h2 class="post-title">${post.title}</h2>
-        <div class="post-meta">
-          ❤️ ${post.likes} &nbsp;&nbsp; 💬 ${
+    postWrapper.innerHTML = `
+      <h2 class="post-title">${post.title}</h2>
+      <div class="post-meta">
+        ❤️ ${post.likes} &nbsp;&nbsp; 💬 ${
       post.commentCount
     } &nbsp;&nbsp; 조회수 ${post.views}
-          <span class="post-date">${post.updatedAt.slice(0, 10)}</span>
-        </div>
-        <p class="post-author">작성자: ${post.userEmail}</p>
+        <span class="post-date">${post.updatedAt.slice(0, 10)}</span>
       </div>
+      <p class="post-author">작성자: ${post.userEmail}</p>
     `;
 
-    container.appendChild(postLink);
+    postWrapper.addEventListener("click", () => {
+      location.hash = `#/postdetail?id=${post.id}`;
+    });
+
+    container.appendChild(postWrapper);
   });
 }
 

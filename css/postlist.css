@@ -18,23 +18,9 @@ body {
   display: flex;
   justify-content: center;
   padding: 20px;
-  width: 100%;
+  width: 600px;
   height: 80px;
   border-bottom: 2px solid gray;
-}
-.avatar {
-  position: absolute;
-  right: 35%;
-  top: 2%;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  border-radius: 50%;
-  background-color: skyblue;
-  cursor: pointer;
-  overflow: hidden;
-  text-align: center;
-  font-size: 25px;
 }
 #prevBtn {
   position: absolute;
@@ -140,8 +126,8 @@ h1 {
 
 .dropdown-menu {
   position: absolute;
-  right: 35%;
-  top: 8%;
+  right: 32%;
+  top: 9%;
   display: none;
   background-color: #e9e9e9;
   min-width: 150px;
