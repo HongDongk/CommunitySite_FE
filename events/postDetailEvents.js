@@ -5,6 +5,7 @@ import {
   postdeletefetch,
   commentcreatefetch,
   commentfetch,
+  logoutfetch,
 } from "../utils/datafetch.js";
 import { getData } from "../utils/webstoredata.js";
 
@@ -67,5 +68,18 @@ export async function bindPostDetailEvents() {
     } else {
       alert("댓글은 한 글자 이상이어야 합니다!");
     }
+  });
+
+  // 드롭다운 및 로그아웃 이벤트
+  const dropdownBtn = document.querySelector(".dropdown-button");
+  const dropdownMenu = document.querySelector(".dropdown-menu");
+  const logoutBtn = document.getElementById("logout");
+
+  dropdownBtn?.addEventListener("click", () => {
+    dropdownMenu.classList.toggle("show");
+  });
+
+  logoutBtn?.addEventListener("click", () => {
+    logoutfetch();
   });
 }
