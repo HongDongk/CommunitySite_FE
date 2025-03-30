@@ -10,11 +10,11 @@
 
 ## 🔥 FrontEnd 고도화 사항
 
-**`Vanilla JS` 프로젝트를 `React` 프로젝트처럼 동작하도록 만든다.**
-
- - `SPA` 구조로 개발
- - `Vanilla JS`로 `Virtual DOM` 구현
- - 컴포넌트 단위 개발
+ - 단일 HTML로 구성된 **SPA 구조**로 리팩토링
+   
+ - React처럼 동작하는 Virtual DOM 기반의 렌더링 시스템 직접 구현
+  
+ - 컴포넌트 구조화
 
 ---
 
