@@ -63,6 +63,8 @@ https://youtu.be/23JmDJBiJTI
 
 ## ✅ TODO
 
+ - 전체 프로젝트 컴포넌트 단위로 분리
+
 ---
 
 ## 🌈 회고
