@@ -42,6 +42,7 @@
 ## 💻 실행 플로우
 
 ### 실행영상
+https://youtu.be/23JmDJBiJTI
 
 ### 실행화면
 
