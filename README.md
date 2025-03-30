@@ -38,6 +38,28 @@
 
 - `index.html` - 프로젝트 단일 HTML 파일(SPA 구조)
 
+--- 
+## 💻 실행 화면
+|로그인|회원가입|
+|---|---|
+|![login](https://github.com/user-attachments/assets/e56da7a9-52c4-47c0-870d-e9da4a1979e6)|![signup](https://github.com/user-attachments/assets/31e26b05-ddf1-4c86-9954-bb396b5890c2)|
+
+|전체 게시글|게시글 상세|게시글 수정|
+|---|---|---|
+|![post-list](https://github.com/user-attachments/assets/fbcf7018-bdba-4c80-9113-d248b6304439)|![post-detail](https://github.com/user-attachments/assets/c13a13b0-1c04-4225-a18c-c9817449e353)|![post-edit](https://github.com/user-attachments/assets/a12c6e10-b433-4310-aa79-d87c71a6b947)|
+
+|게시글 삭제 모달|댓글 삭제 모달|
+|---|---|
+|![post-delete](https://github.com/user-attachments/assets/74b0bab6-6a12-4109-a82a-50923e6cf763)|![comment-delete](https://github.com/user-attachments/assets/cc048fbf-6594-4f45-a343-e7c2301e5dac)|
+
+|드롭다운|비밀번호 변경|
+|---|---|
+|![dropdown](https://github.com/user-attachments/assets/d326f4b8-ef25-4da5-a36e-1ea8e37ca556)|![change-password](https://github.com/user-attachments/assets/c179eb2e-33e3-4b8c-904a-b4f158ea1ace)|
+
+|회원정보 수정|회원 탈퇴 모달|
+|---|---|
+|![edit-profile](https://github.com/user-attachments/assets/ae2ac4d4-7630-41fc-b3f8-26f0dd4b2693)|![member-withdrawal](https://github.com/user-attachments/assets/763deef4-d097-4a83-b3df-d12c32e5e5d1)|
+
 ---
 
 ## ✅ TODO
