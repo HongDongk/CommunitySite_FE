@@ -6,6 +6,7 @@
   color: black;
 }
 body {
+  background-color: #f6f2ff;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -22,7 +23,7 @@ body {
   padding: 20px;
   width: 600px;
   height: 80px;
-  border-bottom: 2px solid gray;
+  border-bottom: 2px solid black;
   font-size: 15px;
 }
 #prevBtn {
@@ -31,6 +32,7 @@ body {
 }
 .title {
   font-size: 30px;
+  color: black;
 }
 
 .board-container {

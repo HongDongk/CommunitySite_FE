@@ -5,6 +5,7 @@
   text-decoration: none;
 }
 body {
+  background-color: #f6f2ff;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -18,7 +19,7 @@ body {
   padding: 20px;
   width: 400px;
   text-align: center;
-  border-bottom: 2px solid gray;
+  border-bottom: 2px solid black;
   font-size: 30px;
 }
 .title a {
@@ -26,6 +27,7 @@ body {
   color: black;
 }
 .signup-container {
+  background: white;
   margin-top: 20px;
   padding: 2rem;
   border-radius: 10px;
@@ -132,7 +134,7 @@ body {
   display: block;
 }
 .active {
-  background-color: pink;
+  background-color: #b291ff;
   color: white;
 }
 

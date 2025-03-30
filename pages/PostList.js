@@ -24,7 +24,7 @@ export function PostList() {
           },
           {
             type: "h1",
-            children: ["커뮤니티 서비스"],
+            children: ["힐링 커뮤니티"],
           },
           {
             type: "div",
@@ -74,7 +74,7 @@ export function PostList() {
             type: "div",
             props: { class: "board-header" },
             children: [
-              { type: "h1", props: {}, children: ["📢 카테부 게시판"] },
+              { type: "h1", props: {}, children: ["☘️ 게시글"] },
               {
                 type: "a",
                 props: { href: "#/createpost" },

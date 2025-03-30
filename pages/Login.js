@@ -13,7 +13,7 @@ export function Login() {
         children: [
           {
             type: "p",
-            children: ["커뮤니티 서비스"],
+            children: ["힐링 커뮤니티"],
           },
         ],
       },

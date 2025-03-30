@@ -5,6 +5,7 @@
   text-decoration: none;
 }
 body {
+  background-color: #f6f2ff;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -21,7 +22,7 @@ body {
   padding: 20px;
   width: 600px;
   height: 80px;
-  border-bottom: 2px solid gray;
+  border-bottom: 2px solid black;
   font-size: 15px;
 }
 #prevBtn {
@@ -31,6 +32,7 @@ body {
 
 .title {
   font-size: 30px;
+  color: black;
 }
 
 .post-container {
@@ -107,7 +109,8 @@ body {
 .post-content {
   padding: 10px;
   line-height: 25px;
-  background-color: #fffbe0;
+  background-color: #eae6f8;
+  border-radius: 5px;
   font-size: 0.8em;
   margin-bottom: 10px;
 }
@@ -137,7 +140,7 @@ body {
 }
 
 .comment-submit {
-  background-color: #007bff;
+  background-color: #7f6aee;
   color: white;
   border: none;
   padding: 8px 12px;

@@ -48,7 +48,7 @@ export function EditProfile() {
           {
             type: "a",
             props: { href: "#/postlist" },
-            children: ["커뮤니티 서비스"],
+            children: ["힐링 커뮤니티"],
           },
         ],
       },

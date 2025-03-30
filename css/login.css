@@ -5,6 +5,7 @@
   text-decoration: none;
 }
 body {
+  background-color: #f6f2ff;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -18,14 +19,16 @@ body {
   padding: 20px;
   width: 100%;
   text-align: center;
-  border-bottom: 2px solid gray;
+  border-bottom: 2px solid black;
   font-size: 30px;
+  color: black;
 }
 .title a {
   text-decoration: none;
   color: black;
 }
 .login-container {
+  background-color: white;
   margin-top: 10%;
   padding: 2rem;
   border-radius: 10px;
@@ -51,14 +54,14 @@ body {
 #loginButton {
   width: 100%;
   padding: 10px;
-  background-color: '#ACAOEB';
+  background-color: "#ACAOEB";
   border: none;
   border-radius: 5px;
   cursor: pointer;
   margin-top: 10px;
 }
 .active {
-  background-color: pink;
+  background-color: #7f6aee;
   color: white;
 }
 .signup {

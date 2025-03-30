@@ -104,7 +104,6 @@ export async function passwordfetch(userId, password) {
       body: password,
     });
     removeData("user");
-    location.hash = "#/login";
   } catch (err) {
     console.log(err);
     alert("비밀번호 변경 실패");

@@ -6,6 +6,7 @@
   color: black;
 }
 body {
+  background-color: #f6f2ff;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -22,15 +23,16 @@ body {
   padding: 20px;
   width: 600px;
   height: 80px;
-  border-bottom: 2px solid gray;
+  border-bottom: 2px solid black;
   font-size: 15px;
 }
 #prevBtn {
   width: 30px;
   height: 30px;
 }
-.title {
-  font-size: 30px;
+.title a {
+  font-size: 20px;
+  color: black;
 }
 .write-container {
   margin-top: 20px;
@@ -42,9 +44,9 @@ body {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+.write-container h1 {
+  font-size: 28px;
   text-align: center;
-  margin-bottom: 20px;
 }
 
 form {
@@ -57,7 +59,7 @@ label {
   width: 100%;
   text-align: start;
   font-weight: bold;
-  margin-top: 15px;
+  margin-top: 45px;
   padding-bottom: 10px;
 }
 
@@ -70,7 +72,7 @@ textarea {
   border-radius: 5px;
 }
 
-#imageinput {
+#imageInput {
   border: none;
 }
 
@@ -79,7 +81,7 @@ textarea {
 }
 
 #createPostButton {
-  width: 80%;
+  width: 100%;
   margin-top: 30px;
   padding: 10px;
   background-color: "#ACAOEB";
@@ -88,7 +90,7 @@ textarea {
   cursor: pointer;
 }
 .active {
-  background-color: pink;
+  background-color: #b291ff;
   color: white;
 }
 

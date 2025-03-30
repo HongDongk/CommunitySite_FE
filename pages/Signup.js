@@ -14,7 +14,7 @@ export function Signup() {
           {
             type: "a",
             props: { href: "#/login" },
-            children: ["커뮤니티 서비스"],
+            children: ["힐링 커뮤니티"],
           },
         ],
       },

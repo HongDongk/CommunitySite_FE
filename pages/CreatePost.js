@@ -24,7 +24,7 @@ export function CreatePost() {
           },
           {
             type: "h1",
-            children: ["커뮤니티 서비스"],
+            children: ["힐링 커뮤니티"],
           },
           {
             type: "div",
@@ -76,7 +76,7 @@ export function CreatePost() {
         type: "div",
         props: { class: "write-container" },
         children: [
-          { type: "h1", props: {}, children: ["📝 게시글 작성"] },
+          { type: "h1", props: {}, children: ["🌱 게시글 작성"] },
           {
             type: "form",
             props: { id: "postForm" },

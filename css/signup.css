@@ -5,6 +5,7 @@
   text-decoration: none;
 }
 body {
+  background-color: #f6f2ff;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -18,14 +19,16 @@ body {
   padding: 20px;
   width: 100%;
   text-align: center;
-  border-bottom: 2px solid gray;
+  border-bottom: 2px solid black;
   font-size: 30px;
+  color: #2e2e5e;
 }
 .title a {
   text-decoration: none;
   color: black;
 }
 .signup-container {
+  background-color: white;
   margin-top: 5%;
   padding: 2rem;
   border-radius: 10px;
@@ -51,7 +54,7 @@ body {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: #ddd;
+  background-color: #ededed;
   cursor: pointer;
   overflow: hidden;
   border: 2px solid #aaa;
@@ -81,7 +84,7 @@ body {
 #signupButton {
   width: 100%;
   padding: 10px;
-  background-color: '#ACAOEB';
+  background-color: "#ACAOEB";
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -106,6 +109,6 @@ body {
   display: block;
 }
 .active {
-  background-color: pink;
+  background-color: #7f6aee;
   color: white;
 }
